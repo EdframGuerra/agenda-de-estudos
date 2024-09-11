@@ -6,6 +6,7 @@ import lombok.*;
 import java.io.Serializable;
 import java.util.List;
 
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -21,7 +22,7 @@ public class Agenda implements Serializable {
     private Long id;
 
     @OneToMany(mappedBy = "agenda", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Evento> eventos;
+    private List<Event> events;
 
     @ManyToOne
     @JoinColumn(name = "user_id")

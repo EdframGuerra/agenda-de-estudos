@@ -7,6 +7,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -14,9 +15,9 @@ import java.time.LocalTime;
 @ToString
 @Entity
 @Table(name = "TB_eventos")
-public class Evento implements Serializable {
+public class Event implements Serializable {
 
-    private static final long serialVersionUID = 1L; // Correção do serialVersionUID
+    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

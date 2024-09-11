@@ -24,5 +24,5 @@ public class User implements Serializable {
     private Long id;
 
     @Column(name = "name", nullable = false, length = 20)
-    private String nome;
+    private String name;
 }
