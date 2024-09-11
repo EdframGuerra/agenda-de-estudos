@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+import static com.eguerra.agenda.utils.ConvertDtos.toEntity;
+
 
 @Service
 public class UserService {
@@ -19,8 +21,8 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public User create (UserDto userDto){
-        User user = convertUser(userDto);
+    public User create(UserDto userDto){
+        User user = toEntity(userDto);
         return userRepository.save(user);
     }
 
@@ -63,15 +65,5 @@ public class UserService {
             throw new EntityNotFoundException("User not found");
         }
         return user;
-    }
-
-
-
-
-    private User convertUser(UserDto userDto) {
-        User user = new User();
-
-        user.setName(userDto.getName());
-        return  user;
     }
 }
