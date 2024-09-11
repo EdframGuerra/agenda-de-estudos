@@ -23,10 +23,10 @@ public class Event implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "Tb_titulo", nullable = false, length = 50)
+    @Column(name = "Tb_titulo", nullable = false, length = 500)
     private String titulo;
 
-    @Column(name = "Tb_descricao", nullable = false, length = 350)
+    @Column(name = "Tb_descricao", nullable = false, length = 3500)
     private String descricao;
 
     @Column(name = "Tb_data", nullable = false)
