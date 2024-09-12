@@ -23,19 +23,19 @@ public class Event implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "Tb_titulo", nullable = false, length = 500)
+    @Column(name = "titulo", nullable = false, length = 5000)
     private String titulo;
 
-    @Column(name = "Tb_descricao", nullable = false, length = 3500)
+    @Column(name = "descricao", nullable = false, length = 5000)
     private String descricao;
 
-    @Column(name = "Tb_data", nullable = false)
+    @Column(name = "data", nullable = false)
     private LocalDate date;
 
-    @Column(name = "Tb_hora", nullable = false)
+    @Column(name = "hora", nullable = false)
     private LocalTime hora;
 
     @ManyToOne
-    @JoinColumn(name = "agenda_id") // Nome da coluna que fará a referência
+    @JoinColumn(name = "agenda_id")
     private Agenda agenda;
 }

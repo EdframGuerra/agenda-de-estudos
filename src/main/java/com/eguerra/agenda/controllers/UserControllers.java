@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.Stack;
+
 
 @RestController
 @RequestMapping("/agenda")
@@ -25,10 +25,10 @@ public class UserControllers {
     public ResponseEntity<Object>saveUser(@RequestBody @Valid UserDto userDto){
         try{
             User saverUser = userService.create(userDto);
-            return ResponseEntity.status(HttpStatus.CREATED).body("Usuario criado com sucesso");
+            return ResponseEntity.status(HttpStatus.CREATED).body("User created successfully");
         }
         catch (Exception e){
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao criar usuario");
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error creating user");
         }
     }
 

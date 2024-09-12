@@ -39,9 +39,9 @@ public class EventService {
         return eventOptional.get();
     }
 
-    public List<Event>findByName(String titulo){
-        List<Event>eventExact = eventRepository.findByName(titulo);
-        return !eventExact.isEmpty()?eventExact:eventRepository.findByNameContainingIgnoreCase(titulo);
+    public List<Event>findByTitulo(String titulo){
+        List<Event>eventExact = eventRepository.findByTitulo(titulo);
+        return !eventExact.isEmpty()?eventExact:eventRepository.findByTituloContainingIgnoreCase(titulo);
     }
 
     public List<Event>findByDate(LocalDate date){
