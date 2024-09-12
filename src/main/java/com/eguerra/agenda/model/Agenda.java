@@ -3,6 +3,7 @@ package com.eguerra.agenda.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
 
@@ -15,6 +16,7 @@ import java.util.List;
 @Entity
 @Table(name = "Tb_agenda")
 public class Agenda implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Id
