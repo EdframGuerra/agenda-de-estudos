@@ -4,9 +4,11 @@ import com.eguerra.agenda.dtos.EventDto;
 import com.eguerra.agenda.model.Event;
 import com.eguerra.agenda.repository.EventRepository;
 import jakarta.persistence.EntityNotFoundException;
+import jakarta.validation.constraints.NotNull;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -47,6 +49,10 @@ public class EventService {
     public List<Event>findByDate(LocalDate date){
         return eventRepository.findByDate(date);
     }
+
+   public List<Event>findByHora(LocalTime hora){
+        return eventRepository.findByHora(hora);
+   }
 
     public Event updateEvent(Long id, EventDto eventDto){
         Optional<Event>optionalEvent = eventRepository.findById(id);
