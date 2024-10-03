@@ -7,6 +7,9 @@ import com.eguerra.agenda.model.Agenda;
 import com.eguerra.agenda.model.Event;
 import com.eguerra.agenda.model.User;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class ConvertDtos {
 
     public static User toEntity(UserDto userDto) {
@@ -45,6 +48,4 @@ public class ConvertDtos {
 
         return agenda;
     }
-
-
 }

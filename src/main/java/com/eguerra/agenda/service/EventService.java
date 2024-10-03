@@ -4,7 +4,6 @@ import com.eguerra.agenda.dtos.EventDto;
 import com.eguerra.agenda.model.Event;
 import com.eguerra.agenda.repository.EventRepository;
 import jakarta.persistence.EntityNotFoundException;
-import jakarta.validation.constraints.NotNull;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;

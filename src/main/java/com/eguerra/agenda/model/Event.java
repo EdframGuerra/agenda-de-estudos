@@ -38,4 +38,7 @@ public class Event implements Serializable {
     @ManyToOne
     @JoinColumn(name = "agenda_id")
     private Agenda agenda;
+
+    public Event(String titulo, String descricao, LocalDate date, LocalTime hora, Agenda agenda) {
+    }
 }
